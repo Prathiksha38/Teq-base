@@ -1,0 +1,50 @@
+/* Add some styling for the container */
+.report-showing-container {
+    margin: 20px;
+    color: white;
+  }
+  
+  /* Style the filter section */
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .filter-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .filter-item input {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  /* Table styling */
+  .report-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .report-table th, .report-table td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .report-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* Style for the "Checked" and "Not Checked" text */
+  .report-table td div {
+    font-size: 14px;
+  }
+  
+  .report-table td div span {
+    font-weight: bold;
+  }
+  
