@@ -9,9 +9,9 @@
 
 import pymongo
 
-# ✅ Updated connection string with tls=true to fix Render SSL error
+# ✅ MongoDB Atlas connection string with TLS fixes for Render
 con = pymongo.MongoClient(
-    "mongodb+srv://prathiksha383:OibBzIDTvnI2XIk8@cluster3.gqobdtx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3&tls=true"
+    "mongodb+srv://prathiksha383:OibBzIDTvnI2XIk8@cluster3.gqobdtx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3&tls=true&tlsAllowInvalidCertificates=true"
 )
 
 # ✅ Connect to the 'project' database
