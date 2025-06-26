@@ -1,6 +1,6 @@
 import pymongo
 # from pymongo import MongoClient
-con = pymongo.MongoClient("mongodb://localhost:27017/")
+con = pymongo.MongoClient("mongodb+srv://prathiksha383:OibBzIDTvnI2XIk8@cluster3.gqobdtx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3")
 db = con ['project'] 
 
 # import mongoengine
