@@ -35,16 +35,17 @@ class stud_view(APIView): #all the student details
     
  # emp details -insert,retrieve       
 class emp_ap(APIView):
-    def post(self,request):#emp signup
-            collection_emp.insert_one(request.data)
-            return Response("data successfully submitted")
-    def get(self, request):
+    def get(request):
         try:
             employee = collection_emp.find({}, {"_id": 0})
             return Response(list(employee))
         except Exception as e:
             print("Error in emp_ap.get():", e)
             return Response({"error": str(e)}, status=500)
+    def post(self,request):#emp signup
+            collection_emp.insert_one(request.data)
+            return Response("data successfully submitted")
+    
 
     # def put(self,request,Empid):
     #     collection_emp.update_one({"Empid": Empid},{"$set":request.data})
