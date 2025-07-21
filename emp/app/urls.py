@@ -7,8 +7,8 @@ urlpatterns = [
     path('stud/put/<str:regno>/', student_ap.as_view(), name="update_student"),
     path('stud/del/<str:regno>/', student_ap.as_view(), name="delete_student"),
     # Employee URLs 
-    path('emp/post/', emp_ap.as_view(), name="create_employee"),
     path('emp/get/', emp_ap.as_view()),
+    path('emp/post/', emp_ap.as_view(), name="create_employee"),
     path('emp/put/<str:Empid>/', emp_ap.as_view(), name="update_employee"),
     path('emp/del/<str:Empid>/', emp_ap.as_view(), name="delete_employee"),
     # emp_log URLs
