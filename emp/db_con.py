@@ -1,19 +1,13 @@
-# import pymongo
-# # from pymongo import MongoClient
-# con = pymongo.MongoClient("mongodb+srv://prathiksha383:OibBzIDTvnI2XIk8@cluster3.gqobdtx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3")
-# db = con ['project'] 
-
-# # import mongoengine
-
-# # db=mongoengine.connect('project')  
-
+# db_con.py
 import pymongo
+import certifi
 
-# ✅ MongoDB Atlas connection string with TLS fixes for Render
-con = pymongo.MongoClient(
-    "mongodb+srv://prathiksha383:prathiksha383@cluster0.khqiya2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-)
+# ✅ MongoDB Atlas connection string
+MONGO_URI = "mongodb+srv://prathiksha383:prathiksha383@cluster0.khqiya2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
-# ✅ Connect to the 'project' database
+# ✅ Connect using certificate
+con = pymongo.MongoClient(MONGO_URI, tlsCAFile=certifi.where())
+
+# ✅ Use the 'project' database
 db = con['project']
 
