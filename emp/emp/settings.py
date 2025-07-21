@@ -137,7 +137,6 @@ REST_FRAMEWORK = {
 # CORS SETTINGS (Frontend allowed origins)
 # ==================================
 CORS_ALLOW_ALL_ORIGINS = True  # For full access — you can tighten it as below
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000',
-#     'https://your-frontend.onrender.com',
-# ]
+CORS_ALLOWED_ORIGINS = [
+    'https://your-frontend.onrender.com',
+]
