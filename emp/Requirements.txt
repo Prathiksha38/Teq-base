@@ -3,3 +3,4 @@ djangorestframework
 pymongo
 django-cors-headers
 dnspython
+certifi
