@@ -11,7 +11,7 @@ import pymongo
 
 # ✅ MongoDB Atlas connection string with TLS fixes for Render
 con = pymongo.MongoClient(
-    "mongodb+srv://prathiksha383:prathiksha383@cluster0.khqiya2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/project"
+    "mongodb+srv://prathiksha383:prathiksha383@cluster0.khqiya2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 )
 
 # ✅ Connect to the 'project' database
