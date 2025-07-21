@@ -35,7 +35,7 @@ class stud_view(APIView): #all the student details
     
  # emp details -insert,retrieve       
 class emp_ap(APIView):
-    def get(request):
+    def get(self,request):
         try:
             employee = collection_emp.find({}, {"_id": 0})
             return Response(list(employee))
