@@ -37,17 +37,17 @@ class stud_view(APIView): #all the student details
  # emp details -insert,retrieve       
 class emp_ap(APIView):
    def get(self, request):
-        try:
-            print("🔍 Trying to fetch employee records...")
-            employee_cursor = collection_emp.find({}, {"_id": 0})
-            employee_list = list(employee_cursor)
-            print("✅ Employee Data Fetched:", employee_list)
-            return Response(employee_list)
-        except Exception as e:
-            print("❌ Error in emp_ap.get():", e)
-            return Response({"error": str(e)}, status=500)
+            try:
+                print("🔍 Trying to fetch employee records...")
+                employee_cursor = collection_emp.find({}, {"_id": 0})
+                employee_list = list(employee_cursor)
+                print("✅ Employee Data Fetched:", employee_list)
+                return Response(employee_list)
+            except Exception as e:
+                print("❌ Error in emp_ap.get():", e)
+                return Response({"error": str(e)}, status=500)
 
-    def post(self,request):#emp signup
+    def post(self,request):
             collection_emp.insert_one(request.data)
             return Response("data successfully submitted")
     
