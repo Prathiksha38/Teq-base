@@ -1,9 +1,9 @@
 from django.db import models
-from db_con import db
+# from db_con import db
 
-collection_emp= db['employee']
-collection_student=db['student']
-collection_rep=db['report']
+# collection_emp= db['employee']
+# collection_student=db['student']
+# collection_rep=db['report']
 
 
 # class stud_details(models.Model):
