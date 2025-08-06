@@ -25,7 +25,8 @@ class emp_log(APIView):
             return Response({"error": "employee not found"})
     def get(self,request,empId): # single employee name retriving using empid
         employee=collection_emp.find_one({"emp":empId})
-        return(employee.get('name'))
+        return Response(employee.get('name'))
+
     
     
 class stud_view(APIView): #all the student details
@@ -35,13 +36,17 @@ class stud_view(APIView): #all the student details
     
  # emp details -insert,retrieve       
 class emp_ap(APIView):
-    def get(self,request):
+   def get(self, request):
         try:
-            employee = collection_emp.find({}, {"_id": 0})
-            return Response(list(employee))
+            print("🔍 Trying to fetch employee records...")
+            employee_cursor = collection_emp.find({}, {"_id": 0})
+            employee_list = list(employee_cursor)
+            print("✅ Employee Data Fetched:", employee_list)
+            return Response(employee_list)
         except Exception as e:
-            print("Error in emp_ap.get():", e)
+            print("❌ Error in emp_ap.get():", e)
             return Response({"error": str(e)}, status=500)
+
     def post(self,request):#emp signup
             collection_emp.insert_one(request.data)
             return Response("data successfully submitted")
