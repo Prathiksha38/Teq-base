@@ -10,4 +10,6 @@ con = pymongo.MongoClient(MONGO_URI, tlsCAFile=certifi.where())
 
 # ✅ Use the 'project' database
 db = con['project']
-
+collection_emp= db['employee']
+collection_student=db['student']
+collection_rep=db['report']
